@@ -54,8 +54,7 @@ void ofxGifFile::addFrame(ofPixels _px, int _left, int _top, GifFrameDisposal di
                             
                         case GIF_DISPOSAL_LEAVE:
                         case GIF_DISPOSAL_UNSPECIFIED:
-                            _px.setColor(x,y,accumPx.getColor(cropX, cropY));
-//                            accumPx.setColor(x,y,_px.getColor(cropX, cropY));
+                            accumPx.setColor(x,y,_px.getColor(cropX, cropY));
                             break;
                             
                         case GIF_DISPOSAL_PREVIOUS:

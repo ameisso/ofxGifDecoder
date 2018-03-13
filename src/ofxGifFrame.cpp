@@ -20,7 +20,7 @@ void ofxGifFrame::setFromPixels(ofPixels _px, int _left , int _top, float _durat
     left      = _left;
     top       = _top;
     duration  = _duration;
-    tx.allocate(pixels.getWidth(), pixels.getHeight(), GL_RGB); // rgb for now
+    tx.allocate(pixels.getWidth(), pixels.getHeight(), GL_RGBA); // rgb for now
     tx.loadData(pixels);
 }
 
@@ -31,7 +31,7 @@ void ofxGifFrame::setFromGifPixels(ofPixels _constructedPx, ofPixels _rawPx , in
     top      = _top;
     duration = _duration;
     
-    tx.allocate(pixels.getWidth(), pixels.getHeight(), GL_RGB); // rgb for now
+    tx.allocate(pixels.getWidth(), pixels.getHeight(), GL_RGBA); // rgb for now
     tx.loadData(pixels);
 }
 
