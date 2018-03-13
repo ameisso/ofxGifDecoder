@@ -63,3 +63,7 @@ void ofxGifFrame::draw(float _x, float _y){
 void ofxGifFrame::draw(float _x, float _y, int _w, int _h){
     tx.draw(_x, _y, _w, _h);
 }
+
+float ofxGifFrame::getDuration(){
+    return duration;
+}

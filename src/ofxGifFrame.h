@@ -27,6 +27,7 @@ public:
     int getHeight();
     int getLeft();
     int getTop();
+    float getDuration();
     
 private:
     int top;
@@ -38,5 +39,4 @@ private:
     float duration;
     // optional
     vector<ofColor> palette;
-
 };
