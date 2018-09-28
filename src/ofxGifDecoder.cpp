@@ -150,8 +150,8 @@ void ofxGifDecoder::processFrame(FIBITMAP * bmp, int _frameNum){
 	unsigned char * bmpBits = FreeImage_GetBits(bmp);
     
 	if(bmpBits != NULL) {
-        
-		pix.setFromAlignedPixels(bmpBits, width, height, channels, pitch);
+#warning : hack to have the correct colors, but we should get this from the file metadata I guess 
+		pix.setFromAlignedPixels(bmpBits, width, height, OF_PIXELS_BGRA, pitch);
             
         #ifdef TARGET_LITTLE_ENDIAN
             pix.swapRgb();
